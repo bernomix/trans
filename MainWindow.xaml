@@ -45,7 +45,7 @@
         </ComboBox>
       </Grid>
       <ui:Button Content="変換" Width="80" Height="345" Click="ButtonBase_OnClick" />
-      <Grid x:Name="GridAfterConverted"  Margin="5">
+      <Grid x:Name="GridAfterConverted" Margin="5">
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto" />
           <RowDefinition Height="Auto" />
