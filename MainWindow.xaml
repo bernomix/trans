@@ -1,0 +1,58 @@
+﻿<ui:FluentWindow
+  x:Class="Trans.MainWindow"
+  x:Name="TransMainFluentWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="clr-namespace:"
+  xmlns:tray="http://schemas.lepo.co/wpfui/2022/xaml/tray"
+  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+  mc:Ignorable="d"
+  Title="Trans"
+  Height="450"
+  Width="720"
+  d:DesignHeight="450"
+  d:DesignWidth="720"
+  ExtendsContentIntoTitleBar="True"
+  WindowBackdropType="Mica"
+  WindowCornerPreference="Round"
+  WindowStartupLocation="CenterScreen">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <ui:TitleBar
+      x:Name="TitleBar"
+      Title="Trans"
+      Grid.Row="0"
+      CloseWindowByDoubleClickOnIcon="True">
+    </ui:TitleBar>
+    <StackPanel x:Name="StackPanel" Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+      <Grid x:Name="GridBeforeConverted" Margin="5">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ui:TextBox x:Name="TextboxBeforeConverted" Grid.Row="0" PlaceholderText="変換前のテキスト" TextWrapping="Wrap"
+                    Width="260" Height="300" Margin="0 0 0 5" TextChanged="TextboxBeforeConverted_OnTextChanged"
+                    VerticalScrollBarVisibility="Visible" AcceptsReturn="True"
+                    AcceptsTab="True" AutoWordSelection="False" />
+        <ComboBox x:Name="ComboboxBeforeConverted" Grid.Row="1" Width="260" SelectedIndex="0">
+          <TextBlock Text="ラテン文字" />
+          <TextBlock Text="キリル文字（ロシア語）" />
+        </ComboBox>
+      </Grid>
+      <ui:Button Content="変換" Width="80" Height="345" Click="ButtonBase_OnClick" />
+      <Grid x:Name="GridAfterConverted"  Margin="5">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ui:TextBox x:Name="TextboxAfterConverted" Grid.Row="0" PlaceholderText="変換後のテキスト" TextWrapping="Wrap"
+                    Width="260" Height="345" />
+      </Grid>
+    </StackPanel>
+  </Grid>
+</ui:FluentWindow>
