@@ -42,6 +42,8 @@
         <ComboBox x:Name="ComboboxBeforeConverted" Grid.Row="1" Width="260" SelectedIndex="0">
           <TextBlock Text="ラテン文字" />
           <TextBlock Text="キリル文字（ロシア語）" />
+          <TextBlock Text="キリル文字（ウクライナ語）" />
+          <TextBlock Text="ギリシャ文字" />
         </ComboBox>
       </Grid>
       <ui:Button Content="変換" Width="80" Height="345" Click="ButtonBase_OnClick" />
